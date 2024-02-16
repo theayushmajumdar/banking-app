@@ -1,6 +1,6 @@
-# Banking System using Spring boot,REST API
+# Banking System REST API
 
-This Spring Boot application serves as a REST API for a project management and financial system. It allows users to manage projects, tasks, users, and perform financial transactions such as withdrawing money.
+This Spring Boot application serves as a REST API for a banking system. It allows users to manage accounts, transactions, users, perform financial operations such as depositing and withdrawing money , and also delete account.
 
 ## Table of Contents
 
@@ -18,10 +18,10 @@ This Spring Boot application serves as a REST API for a project management and f
 
 ## Features
 
-- **Project Management**: Create, read, update, and delete projects.
-- **Task Management**: Manage tasks associated with projects.
+- **Account Management**: Create, read, update, and delete bank accounts.
+- **Transaction Management**: Manage transactions associated with bank accounts.
 - **User Management**: Manage users and their roles within the system.
-- **Financial Transactions**: Perform financial operations like withdrawing money.
+- **Financial Operations**: Perform financial operations such as withdrawing money.
 - **RESTful API**: Provides endpoints for seamless integration with client applications.
 - **Authentication and Authorization**: Secured endpoints using JWT tokens.
 
@@ -48,13 +48,13 @@ This Spring Boot application serves as a REST API for a project management and f
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your_username/project-management-system.git
+   git clone https://github.com/your_username/banking-system.git
    ```
 
 2. Navigate to the project directory:
 
    ```bash
-   cd project-management-system
+   cd banking-system
    ```
 
 3. Update the `application.properties` file in `src/main/resources` with your MySQL database configurations:
@@ -74,7 +74,7 @@ This Spring Boot application serves as a REST API for a project management and f
 5. Run the application:
 
    ```bash
-   java -jar target/project-management-system.jar
+   java -jar target/banking-system.jar
    ```
 
 ## Usage
@@ -83,19 +83,19 @@ This Spring Boot application serves as a REST API for a project management and f
 
 The API exposes the following endpoints:
 
-- **Projects**:
-  - `GET /projects`: Retrieve all projects.
-  - `GET /projects/{projectId}`: Retrieve a specific project by ID.
-  - `POST /projects`: Create a new project.
-  - `PUT /projects/{projectId}`: Update an existing project.
-  - `DELETE /projects/{projectId}`: Delete a project.
+- **Accounts**:
+  - `GET /accounts`: Retrieve all accounts.
+  - `GET /accounts/{accountId}`: Retrieve a specific account by ID.
+  - `POST /accounts`: Create a new account.
+  - `PUT /accounts/{accountId}`: Update an existing account.
+  - `DELETE /accounts/{accountId}`: Delete an account.
 
-- **Tasks**:
-  - `GET /projects/{projectId}/tasks`: Retrieve all tasks for a specific project.
-  - `GET /projects/{projectId}/tasks/{taskId}`: Retrieve a specific task by ID for a project.
-  - `POST /projects/{projectId}/tasks`: Create a new task for a project.
-  - `PUT /projects/{projectId}/tasks/{taskId}`: Update an existing task for a project.
-  - `DELETE /projects/{projectId}/tasks/{taskId}`: Delete a task for a project.
+- **Transactions**:
+  - `GET /accounts/{accountId}/transactions`: Retrieve all transactions for a specific account.
+  - `GET /accounts/{accountId}/transactions/{transactionId}`: Retrieve a specific transaction by ID for an account.
+  - `POST /accounts/{accountId}/transactions`: Create a new transaction for an account.
+  - `PUT /accounts/{accountId}/transactions/{transactionId}`: Update an existing transaction for an account.
+  - `DELETE /accounts/{accountId}/transactions/{transactionId}`: Delete a transaction for an account.
 
 - **Users**:
   - `GET /users`: Retrieve all users.
@@ -104,8 +104,8 @@ The API exposes the following endpoints:
   - `PUT /users/{userId}`: Update an existing user.
   - `DELETE /users/{userId}`: Delete a user.
 
-- **Financial Transactions**:
-  - `POST /transactions/withdraw`: Withdraw money from a user account.
+- **Financial Operations**:
+  - `POST /operations/withdraw`: Withdraw money from an account.
 
 ### Authentication
 
@@ -134,7 +134,7 @@ Response:
 Include the obtained token in subsequent requests:
 
 ```http
-GET /projects
+GET /accounts
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...
 ```
 
@@ -163,7 +163,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...
 
 To help you get started, here's an example Postman collection that includes requests for the endpoints in your project:
 
-[Project Management System API Collection](link_to_your_postman_collection)
+[Banking System API Collection](link_to_your_postman_collection)
 
 #### Running Tests
 
@@ -181,7 +181,6 @@ Contributions are welcome! Please fork the repository and create a pull request 
 ## License
 
 This project is licensed under the [MIT License](LICENSE).
+```
 
----
-
-By including this section in your README, you provide users with information on how to use Postman to interact with your API endpoints, making it easier for them to test and integrate with your project.
+Replace `link_to_your_postman_collection` with the actual link to your Postman collection if you have one. Otherwise, you can leave it as is or remove the placeholder.
