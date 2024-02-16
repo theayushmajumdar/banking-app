@@ -1,8 +1,4 @@
-Certainly! Here's the updated README with the added section for using Postman:
-
----
-
-# Project Management and Financial System REST API
+# Banking System using Spring boot,REST API
 
 This Spring Boot application serves as a REST API for a project management and financial system. It allows users to manage projects, tasks, users, and perform financial transactions such as withdrawing money.
 
