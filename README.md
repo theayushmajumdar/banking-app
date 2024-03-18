@@ -1,8 +1,11 @@
 # Banking System REST API
 
-<iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7165247524830732288" height="1283" width="504" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
-
 This Spring Boot application serves as a REST API for a banking system. It allows users to manage accounts, transactions, users, perform financial operations such as depositing and withdrawing money , and also delete account.
+
+# Video 
+
+Visit this link to see the video explanation
+https://www.linkedin.com/posts/ayushmajumdar_restapi-springboot-java-activity-7165247588311425024-P9Iy?utm_source=share&utm_medium=member_desktop
 
 ## Table of Contents
 
